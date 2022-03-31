@@ -3,6 +3,7 @@
     --pink-bkg: #F1E4E6;
     --pink-color: #F18B99;
     --sales-bkg: #4e4544;
+    --subcsribe-bkg: #F2F2F2;
 }
 
 body {
@@ -119,4 +120,11 @@ body {
 
 .sales__item--shoes {
     width: 100%;
+}
+
+.subcsribe {
+    min-height: 448px;
+    background-color: var(--subcsribe-bkg);
+    background-image: url(../img/subscribe-bkg.jpg);
+    background-position: 20px 20px;
 }
