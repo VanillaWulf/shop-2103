@@ -1,0 +1,199 @@
+:root {
+    --black-bkg: #222222;
+    --pink-bkg: #F1E4E6;
+    --pink-color: #F18B99;
+    --sales-bkg: #4e4544;
+    --subcsribe-bkg: #F2F2F2;
+    --icon-white: #E8E8E8;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: var(--black-bkg);
+}
+
+.header__wrp {
+    display: flex;
+    align-items: center;
+    min-height: 75px;
+    justify-content: space-between;
+}
+
+.header__logo {
+    margin: 0 41px 0 0;
+}
+
+.header__menu-list {
+    display: flex;
+    align-items: center;
+}
+
+.header__burger {
+    border: none;
+    background-color: transparent;
+}
+
+.header__link {
+    margin: 0 0 0 33px;
+}
+
+.header__icon {
+    fill: var(--icon-white);
+    position: relative;
+}
+
+.header__link--basket::before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 20px;
+    content: '5';
+    color: white;
+    background-color: green;
+    z-index: 1;
+}
+
+.header__burger:hover .header__icon,
+.header__link:hover .header__icon,
+.header__burger:focus .header__icon,
+.header__link:focus .header__icon {
+    fill: var(--pink-color);
+    cursor: pointer;
+}
+
+.header__burger:active .header__icon,
+.header__link:active .header__icon {
+    opacity: 0.7;
+}
+
+.header__nav {
+    display: none;
+}
+
+.brand {
+    display: flex;
+}
+
+.brand__img {
+    width: 800px;
+    height: 765px;
+}
+
+.brand__title-wrp {
+    flex-grow: 1;
+    background-color: var(--pink-bkg);
+    padding: 0 0 0 92px;
+    display: flex;
+    align-items: center;
+}
+
+.brand__title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 58px;
+    text-transform: uppercase;
+}
+
+.brand__title-lower {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    display: block;
+}
+
+.brand__title-pink {
+    color: var(--pink-color);
+}
+
+.sales__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sales__item {
+    height: 260px;
+    width: 360px;
+    background-color: var(--sales-bkg);
+}
+
+.sales__item--woman {
+    background-image: url(../img/woman-sales.jpg);
+}
+
+/**/
+
+.sales__item--shoes {
+    width: 100%;
+}
+
+.products__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.products__item {
+    width: 360px;
+}
+
+.subcsribe {
+    min-height: 448px;
+    background-color: var(--subcsribe-bkg);
+    background-image: url(../img/subscribe-bkg.jpg);
+    background-position: 20px 20px;
+}
+
+.products__item-img-wrp {
+    position: relative;
+}
+
+.products__item-img-wrp::before {
+    content: '';
+    background-color: #222222;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    opacity: 0.6;
+    display: none;
+}
+
+.product__item-add-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+
+.products__item:hover .products__item-img-wrp::before,
+.products__item:hover .product__item-add-btn {
+    display: block;
+}
