@@ -1,0 +1,23 @@
+.sales {
+    .sales__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .sales__item {
+        @include font();
+        height: 260px;
+        width: 360px;
+        background-color: $sales-bkg;
+    }
+    
+    .sales__item--woman {
+        background-image: url(../img/woman-sales.jpg);
+    }
+    
+    
+    .sales__item--shoes {
+        width: 100%;
+    }
+}
