@@ -1,0 +1,62 @@
+.header {
+    background-color: $black-bkg;
+    color: red;
+
+    .header__wrp {
+        display: flex;
+        align-items: center;
+        min-height: 75px;
+        justify-content: space-between;
+    }
+    
+    .header__logo {
+        margin: 0 41px 0 0;
+    }
+    
+    .header__menu-list {
+        display: flex;
+        align-items: center;
+    }
+    
+    .header__burger {
+        border: none;
+        background-color: transparent;
+    }
+    
+    .header__link {
+        margin: 0 0 0 33px;
+    }
+    
+    .header__icon {
+        fill: $icon-white;
+        position: relative;
+    }
+    
+    .header__link--basket::before {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 20px;
+        content: '5';
+        color: white;
+        background-color: green;
+        z-index: 1;
+    }
+    
+    .header__burger:hover .header__icon,
+    .header__link:hover .header__icon,
+    .header__burger:focus .header__icon,
+    .header__link:focus .header__icon {
+        fill: $pink-color;
+        cursor: pointer;
+    }
+    
+    .header__burger:active .header__icon,
+    .header__link:active .header__icon {
+        opacity: 0.7;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+}

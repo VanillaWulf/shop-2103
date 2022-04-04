@@ -1,0 +1,41 @@
+.brand {
+    display: flex;
+
+    &__img {
+        width: 800px;
+        height: 765px;
+    }
+
+    &__title-wrp {
+        flex-grow: 1;
+        background-color: $pink-bkg;
+        padding: 0 0 0 92px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        @include font(48px, 50px, 900);
+        text-transform: uppercase;
+
+        // ::before {
+        //     background-color: green;
+        // }
+
+        // &:hover::before {
+        // }
+
+        // &:hover {
+        //     &::before {}
+        // }
+    }
+
+    &__title-lower {
+        @include font(32px, 38px, 700);
+        display: block;
+    }
+
+    &__title-pink {
+        color: $pink-color;
+    }
+}

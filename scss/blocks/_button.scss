@@ -1,0 +1,10 @@
+.button {
+    color: red;
+
+    @include flex-center();
+
+
+    .button--transparent {
+        background-color: transparent;
+    }
+}
