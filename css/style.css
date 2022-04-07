@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -73,10 +74,16 @@ body {
 }
 
 .container {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
+@media (max-width: 1599px) {
+  .container {
+    width: 92%;
+  }
+}
+/**декстоп**/
 .header {
   background-color: #222222;
   color: red;
@@ -130,6 +137,13 @@ body {
   display: none;
 }
 
+/**планшет**/
+/**мобилка**/
+@media (max-width: 767px) {
+  .header__link {
+    display: none;
+  }
+}
 .sales .sales__list {
   display: flex;
   justify-content: space-between;
@@ -143,12 +157,63 @@ body {
   height: 260px;
   width: 360px;
   background-color: #4e4544;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 1599px) {
+  .sales .sales__item {
+    height: 167px;
+    width: 33%;
+  }
+}
+@media (max-width: 767px) {
+  .sales .sales__item {
+    width: 100%;
+    height: 247px;
+  }
+}
+.sales .sales__item-text {
+  font-size: 19px;
+  line-height: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+@media (max-width: 1599px) {
+  .sales .sales__item-text {
+    font-size: 17px;
+    line-height: 15px;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+.sales .sales__item-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  font-style: normal;
+  color: #F18B99;
 }
 .sales .sales__item--woman {
   background-image: url(../img/woman-sales.jpg);
 }
 .sales .sales__item--shoes {
   width: 100%;
+}
+@media (max-width: 1599px) {
+  .sales .sales__item--shoes {
+    height: 117px;
+  }
+}
+@media (max-width: 767px) {
+  .sales .sales__item--shoes {
+    height: 111px;
+  }
 }
 
 .products__list {
@@ -189,7 +254,7 @@ body {
   display: flex;
 }
 .brand__img {
-  width: 800px;
+  width: 50%;
   height: 765px;
 }
 .brand__title-wrp {
@@ -217,6 +282,52 @@ body {
   color: #F18B99;
 }
 
+@media (max-width: 1599px) {
+  .brand__img {
+    height: 100%;
+  }
+  .brand__title-wrp {
+    padding: 0 0 0 68px;
+  }
+  .brand__title {
+    font-size: 44px;
+    line-height: 52px;
+    font-weight: 900;
+    font-style: normal;
+  }
+  .brand__title-lower {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+@media (max-width: 1000px) {
+  .brand__img {
+    height: 370px;
+  }
+}
+@media (max-width: 767px) {
+  .brand__img {
+    display: none;
+  }
+  .brand__title-wrp {
+    padding: 0 0 0 83px;
+    min-height: 363px;
+  }
+  .brand__title {
+    font-size: 38px;
+    line-height: 45px;
+    font-weight: 900;
+    font-style: normal;
+  }
+  .brand__title-lower {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
 .subcsribe {
   min-height: 448px;
   background-color: #F2F2F2;

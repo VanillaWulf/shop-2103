@@ -1,3 +1,5 @@
+/**декстоп**/
+
 .header {
     background-color: $black-bkg;
     color: red;
@@ -57,6 +59,20 @@
     }
     
     .header__nav {
+        display: none;
+    }
+}
+
+/**планшет**/
+
+@media (max-width: $desktop-width) {
+
+}
+
+/**мобилка**/
+
+@media (max-width: $tablet-width) {
+    .header__link {
         display: none;
     }
 }

@@ -20,6 +20,14 @@ body {
 }
 
 .container {
-    width: 1140px;
+    // width: 72%;
+    // max-width: 1300px;
+    max-width: 1140px;
     margin: 0 auto;
+}
+
+@media (max-width: $desktop-width) {
+    .container {
+        width: 92%;
+    }
 }
