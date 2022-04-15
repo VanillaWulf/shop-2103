@@ -6,7 +6,11 @@
     }
 
     &__item {
-        width: 360px;
+        width: 31%;
+
+        @include tablet-min-width {
+            width: 48%;
+        }
 
         &:hover {
             .products__item-img-wrp::before,
@@ -14,6 +18,11 @@
                 display: block;
             } 
         }
+    }
+
+    &__item-img {
+        width: 100%;
+        object-fit: cover;
     }
 
     &__item-img-wrp {

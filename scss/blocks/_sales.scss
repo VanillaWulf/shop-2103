@@ -7,17 +7,70 @@
     
     .sales__item {
         @include font();
-        height: 260px;
+        min-height: 260px;
         width: 360px;
         background-color: $sales-bkg;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        @include flex-center;
+
+        @include tablet {
+            min-height: 167px;
+            width: 33%;
+            background-position-y: 5px;
+        }
+
+        @include tablet-min-width {
+            background-position-y: center;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 247px;
+        }
+    }
+
+    .sales__item-text {
+        @include font(19px, 16px);
+        color: white;
+
+        @include tablet {
+            @include font(17px, 15px);
+        }
+    }
+
+    .sales__item-title {
+        @include font(24px, 28px, 700);
+        color: $pink-color;
     }
     
     .sales__item--woman {
         background-image: url(../img/woman-sales.jpg);
     }
-    
+
+    .sales__item--man {
+        background-image: url(../img/sales-man.jpg);
+    }
+
+    .sales__item--kids {
+        // background-image: url(../img/sales-kids.jpg);
+        background-image: url(../../img/sales-kids.jpg);
+    }
     
     .sales__item--shoes {
+        background-image: url(../img/shoes-sales.jpg);
         width: 100%;
+
+        @include tablet {
+            height: 117px;
+        }
+
+        @include mobile {
+            height: 111px;
+        }
     }
 }
+
+
