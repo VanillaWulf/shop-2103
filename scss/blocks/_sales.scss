@@ -7,7 +7,7 @@
     
     .sales__item {
         @include font();
-        height: 260px;
+        min-height: 260px;
         width: 360px;
         background-color: $sales-bkg;
         background-position: center;
@@ -17,8 +17,13 @@
         @include flex-center;
 
         @include tablet {
-            height: 167px;
+            min-height: 167px;
             width: 33%;
+            background-position-y: 5px;
+        }
+
+        @include tablet-min-width {
+            background-position-y: center;
         }
 
         @include mobile {
@@ -44,8 +49,18 @@
     .sales__item--woman {
         background-image: url(../img/woman-sales.jpg);
     }
+
+    .sales__item--man {
+        background-image: url(../img/sales-man.jpg);
+    }
+
+    .sales__item--kids {
+        // background-image: url(../img/sales-kids.jpg);
+        background-image: url(../../img/sales-kids.jpg);
+    }
     
     .sales__item--shoes {
+        background-image: url(../img/shoes-sales.jpg);
         width: 100%;
 
         @include tablet {

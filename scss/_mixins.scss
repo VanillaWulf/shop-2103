@@ -17,6 +17,12 @@
     }
 }
 
+@mixin tablet-min-width {
+    @media (max-width: $tablet-mid-width) {
+        @content;
+    }
+}
+
 @mixin mobile {
     @media (max-width: $tablet-width) {
         @content;
